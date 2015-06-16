@@ -1,0 +1,26 @@
+{
+  "name": "generator-scijs",
+  "version": "1.0.0",
+  "description": "A generator for generic scijs modules",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "scijs",
+    "scijs-generator",
+    "yeoman",
+    "generator",
+    "template"
+  ],
+  "author": "Ricky Reusser",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^0.20.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}
