@@ -4,11 +4,27 @@ var yeoman = require('yeoman-generator'),
     mkdirp = require('mkdirp')
 
 
+
+function getContextHash( gen ) {
+  return {
+    name: gen.name,
+    author: gen.author,
+    description: gen.description,
+    year: 1900 + (new Date).getYear(),
+    repo: gen.repo
+  }
+}
+
 var generator = yeoman.generators.Base.extend({
 
+  init: function() {
+    this.appname = this.appname.replace(/\s+/g, '-')
+    this.context = getContextHash(this)
+  },
 
   prompting: function() {
     var done = this.async()
+    console.log(this.appname)
     this.prompt([
       {
         type: 'input',
@@ -45,27 +61,11 @@ var generator = yeoman.generators.Base.extend({
   },
 
   readme: function() {
-    var context = {
-      name: this.name,
-      author: this.author,
-      description: this.description,
-      year: 1900 + (new Date).getYear(),
-      repo: this.repo
-    }
-
-    this.template( '_README.md', 'README.md', context )
+    this.template( '_README.md', 'README.md', this.context )
   },
 
   packageJSON: function() {
-    var context = {
-      name: this.name,
-      author: this.author,
-      description: this.description,
-      year: 1900 + (new Date).getYear(),
-      repo: this.repo
-    }
-
-    this.template( '_package.json', 'package.json', context )
+    this.template( '_package.json', 'package.json', this.context )
   },
 
   mkdirs: function() {
