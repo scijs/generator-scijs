@@ -1,9 +1,13 @@
 {
   "name": "generator-scijs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A generator for generic scijs modules",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scijs/generator-scijs.git"
   },
   "files": [
     "app"
