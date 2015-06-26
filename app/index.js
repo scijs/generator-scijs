@@ -19,12 +19,10 @@ var generator = yeoman.generators.Base.extend({
 
   init: function() {
     this.appname = this.appname.replace(/\s+/g, '-')
-    this.context = getContextHash(this)
   },
 
   prompting: function() {
     var done = this.async()
-    console.log(this.appname)
     this.prompt([
       {
         type: 'input',
@@ -54,6 +52,8 @@ var generator = yeoman.generators.Base.extend({
       this.author = answers.author
       this.repo = answers.repo
       this.description = answers.description
+
+      this.context = getContextHash(this)
 
       done()
     }.bind(this))

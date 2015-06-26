@@ -1,6 +1,6 @@
 # <%= name %>
 
-[![Build Status](https://travis-ci.org/scijs/<%= name %>.svg?branch=1.0.0)](https://travis-ci.org/scijs/<%= name %>) [![npm version](https://badge.fury.io/js/<%= name %>.svg)](http://badge.fury.io/js/<%= name %>)
+[![Build Status](https://travis-ci.org/scijs/<%= name %>.svg)](https://travis-ci.org/scijs/<%= name %>) [![npm version](https://badge.fury.io/js/<%= name %>.svg)](http://badge.fury.io/js/<%= name %>) [![Dependency Status](https://david-dm.org/scijs/<%= name %>.svg)](https://david-dm.org/scijs/<%= name %>)
 
 <%= description %>
 
@@ -11,7 +11,6 @@ An introductory description goes here.
 
 Sample usage:
 
-
 ```javascript
 var x = require('<%= name %>')
 
@@ -21,10 +20,8 @@ x( arg1, arg2 )
 
 ## Install
 
-Install the library using 
-
 ```sh
-npm install <%= name %>
+$ npm install <%= name %>
 ```
 
 
